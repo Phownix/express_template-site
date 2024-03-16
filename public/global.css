@@ -1,0 +1,47 @@
+*,::after,::before{
+    box-sizing:border-box;
+    border-width:0;
+    margin:0;
+    padding:0;
+    outline: none;
+}
+
+html{
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    -moz-tab-size:4;
+    tab-size:4;
+    font-family:Figtree, sans-serif;
+    font-feature-settings:normal
+}
+
+body{
+    background-color: #14585A;
+    color: white;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header{
+    padding: 1rem 0;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+footer a{
+    color: #0ee2e9;
+}
+
+.error_box{
+    background-color: #0f4445;
+    border-radius: 1rem;
+    padding: 1rem;
+}
