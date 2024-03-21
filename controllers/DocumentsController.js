@@ -1,7 +1,7 @@
 export class DocumentsController {
     static async Docs (req, res, next) {
         try {
-            res.render("Pages/Docs/index");
+            res.render("Docs/index");
         } catch (error) {
             next(error)
         }

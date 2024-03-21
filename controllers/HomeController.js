@@ -1,7 +1,7 @@
 export class HomeController {
     static async Home (req, res, next) {
         try {
-            res.render("Pages/Home/index");
+            res.render("Home/index");
         } catch (error) {
             next(error)
         }

@@ -35,6 +35,7 @@ app.use(compression());
 app.use('/', express.static('public'));
 
 app.use(async (req, res, next) => {
+    app.locals.url = req.url
     res.set({"X-Powered-By": "Express Template Site - MIT License"});
     next();
 });
