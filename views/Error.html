@@ -17,11 +17,31 @@
     </header>
 
     <main>
-        <strong>We have problems displaying the <kbd>{{url}}</kbd> page</strong>
-        <p>It seems that the page you are trying to access is not available or is having technical problems, you can see more in the description below:</p>
-        <section class="error_box">
-            {{error_name}}
-        </section>
+        <section>
+            <strong>We encountered an error while processing your request</strong>
+            {% if error_type == '404' %}
+                <p>We couldn't find the page you were looking for.</p>
+                <code class="error_box">
+                    <span>Details</span>
+                    {{error_name|safe}}
+                </code>
+                <p>It seems that the page you are trying to access is not available or may have been moved. Please check the URL and try again.</p>
+            {% elif error_type == '500' %}
+                <p>We're sorry, but something went wrong on our end.</p>
+                <code class="error_box">
+                    <span>Details</span>
+                    {{error_name|safe}}
+                </code>
+                <p>This could be due to a server misconfiguration or an unexpected error occurred while processing your request.</p>
+                <p>Please try again later. If the problem persists, feel free to contact support for further assistance.</p>
+            {% else %}
+                <p>We encountered an unexpected error while processing your request.</p>
+                <code class="error_box">
+                    <span>Details</span>
+                    {{error_name|safe}}
+                </code>
+                <p>Please try again later. If the problem persists, don't hesitate to contact support for assistance.</p>
+            {% endif %}
     </main>
 
     <footer>
