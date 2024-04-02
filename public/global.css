@@ -12,30 +12,31 @@ html{
     -moz-tab-size:4;
     tab-size:4;
     font-family:Figtree, sans-serif;
-    font-feature-settings:normal
+    font-feature-settings:normal;
+    background-color: #191919;
 }
 
 body{
     display: flex;
     flex-direction: column;
-    background-color: #0F4445;
-    color: white;
+    background-color: #171717;
+    color: #ececec;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
-    max-width: 600px;
-    height: 100vh;
+    max-width: 640px;
+    min-height: 100vh;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0rem 3rem;
 }
 
 header{
-    padding: 1rem 0;
-    border-bottom: 1px solid #ffffff50;
-    margin-bottom: 1rem;
+    padding: 1.5rem 0rem 2rem 0;
+    border-bottom: 1px solid #1f1f1f;
+    
 }
 
 header h1{
-    font-size: 2em;
+    font-size: 2.25em;
 }
 
 main{
@@ -44,6 +45,14 @@ main{
     gap: .5rem;
     padding: 1rem 0;
     flex-basis: 100%;
+}
+
+main section{
+    margin: 1rem 0;
+}
+
+main ul li{
+    list-style: disc inside;
 }
 
 strong{
@@ -67,7 +76,8 @@ footer{
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    border-top: 1px solid #ffffff50;
+    
+    border-top: 1px solid #1f1f1f;
     margin-top: 1rem;
 }
 
@@ -77,8 +87,24 @@ footer a{
 
 code,
 .error_box{
+    position: relative;
+    display: block;
     background-color: #0c3637;
-    border-radius: 1rem;
+    border-radius: .5rem;
     padding: 1rem;
+    padding-top: 2rem;
+    margin: 1rem 0;
+    font-family: inherit;
+    font-size: .9em;
+}
+
+.error_box span{
+    display: block;
+    position: absolute;
+    top: .5rem;
+    left: 1rem;
+    font-weight: 600;
+    font-variant: small-caps;
+    opacity: .4;
     font-size: .9em;
 }
