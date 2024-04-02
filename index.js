@@ -48,18 +48,20 @@ app.use("/docs", DocumentsRouter);
 app.use((req, res, next) => {
     console.error(`Error 404: ${req.url}`);
 
-    res.render("Error", {
-        error_name: "Page not found"
+    res.status(404).render("Error", {
+        error_type: "404",
+        error_name: "Page not found </br>"+req.url
     });
-})
+});
 
 app.use((err, req, res, next) => {
-    console.error(`Error Stack: ${err}`);
+    console.error(`Error 500: ${err}`);
 
     res.status(500).render("Error", {
-        error_name: err
+        error_type: "500",
+        error_name: err || "Internal Server Error"
     });
-})
+});
 
 // SetUp server
 server.listen(port, () => {
