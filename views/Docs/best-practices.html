@@ -1,0 +1,56 @@
+{% extends "../Layout.html" %}
+
+{% block App %}
+<section>
+    <h2>Clean and Organized Code</h2>
+    <ul>
+        <li>Use descriptive variable names and meaningful comments.</li>
+        <li>Follow consistent coding style conventions.</li>
+    </ul>
+</section>
+<section>
+    <h2>Separation of Concerns</h2>
+    <ul>
+        <li>Separate business logic from views and routing.</li>
+        <li>Utilize controllers for handling HTTP requests and models for business logic.</li>
+    </ul>
+</section>
+<section>
+    <h2>Security Practices</h2>
+    <ul>
+        <li>Validate user input and sanitize data to prevent injection attacks.</li>
+        <li>Implement HTTPS in production environments to ensure data privacy and integrity.</li>
+        <li>Use security middleware like Helmet.js to set secure HTTP headers.</li>
+    </ul>
+</section>
+<section>
+    <h2>Performance Optimization</h2>
+    <ul>
+        <li>Optimize application performance by caching, compressing static resources, and reducing HTTP requests.</li>
+    </ul>
+</section>
+<section>
+    <h2>Error Handling and Logging</h2>
+    <ul>
+        <li>Implement robust error handling using Express middleware and proper exception handling.</li>
+        <li>Utilize error logs and monitoring tools to detect and troubleshoot issues proactively.</li>
+    </ul>
+</section>
+<section>
+    <h2>Testing and Debugging</h2>
+    <ul>
+        <li>Write unit tests and integration tests to ensure code quality and reliability.</li>
+        <li>Debug efficiently using development tools like nodemon for automatic server restarts and morgan for server logging.</li>
+    </ul>
+</section>
+<section>
+    <div class="navegation">
+        <a href="/docs/features" class="back btn_nav">
+            Features
+        </a>
+        <a href="/docs/faqs" class="next btn_nav">
+            Faqs
+        </a>
+    </div>
+</section>
+{% endblock %}

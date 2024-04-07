@@ -1,0 +1,91 @@
+{% extends "../Layout.html" %}
+
+{% block App %}
+<section>
+    <h2>Overview</h2>
+    <p>The Express Template Site project is organized into several directories to facilitate a clear and maintainable codebase.</p>
+</section>
+<section>
+    <h2>Directory Structure</h2>
+    <ul>
+        <li><strong>controllers:</strong> Contains modules for handling different routes and business logic.</li>
+        <li><strong>views:</strong> Contains HTML templates (using Nunjucks) for rendering pages.</li>
+        <li><strong>public:</strong> Contains static assets such as CSS stylesheets, images, and client-side JavaScript files.</li>
+        <li><strong>pages:</strong> Contains route definitions and controllers for different sections of the site.</li>
+        <li><strong>index.js:</strong>: Entry point of the application where Express server is configured and routes are defined.</li>
+        <li><strong>.env:</strong>: Configuration file for environment variables.</li>
+    </ul>
+</section>
+<section>
+    <h2>Key Files</h2>
+    <ul>
+        <li><strong>index.js:</strong> Main entry point of the application where the Express server is configured.</li>
+        <li><strong>HomeController.js:</strong> Controller for handling requests related to the home page.</li>
+        <li><strong>Error.html:</strong> Template for displaying error messages.</li>
+        <li><strong>global.css:</strong> Global stylesheet used across the site.</li>
+    </ul>
+</section>
+<section>
+    <h2>Code Organization</h2>
+    <p>The code follows a modular approach with separate modules for routing, controllers, and views to maintain separation of concerns.</p>
+</section>
+
+<section>
+    <h2>Adding a New Route: Tutorial</h2>
+    <p>In this tutorial, we'll demonstrate how to add a new route to the Express Template Site.</p>
+    <ol>
+        <li>Open `pages/Home.js` and add a new route for the "About Us" page:</li>
+        <pre><code>// pages/Home.js
+
+import { Router } from "express";
+import { HomeController } from "../controllers/HomeController.js";
+
+export const HomeRouter = Router();
+
+HomeRouter.get('/', HomeController.Home);
+
+// Add new route for About Us page
+HomeRouter.get('/about-us', HomeController.AboutUs);</code></pre>
+        <li>Open `controllers/HomeController.js` and define the controller method for the "About Us" page:</li>
+        <pre><code>// controllers/HomeController.js
+
+export class HomeController {
+    static async Home(req, res, next) {
+        try {
+            res.render("home/index");
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    // Controller method for About Us page
+    static async AboutUs(req, res, next) {
+        try {
+            res.render("home/about-us");
+        } catch (error) {
+            next(error);
+        }
+    }
+}</code></pre>
+        <li>Create a new HTML template file `about-us.html` in the `views/home` directory:</li>
+        <pre><code>&lt;!-- views/home/about-us.html --&gt;
+
+&lt;h1&gt;About Us&lt;/h1&gt;
+&lt;p&gt;Welcome to the About Us page!&lt;/p&gt;</code></pre>
+        <li>Usage Example: Now you can navigate to <a href="/about-us">/about-us</a> on your Express Template Site to view the "About Us" page.</li>
+    </ol><br>
+    <p>Congratulations! You have successfully added a new route for the "About Us" page to your Express Template Site.</p><br>
+    <p>For more information, you can refer to the documentation of <a href="https://expressjs.com/en/guide/routing.html" target="_blank">Express.js</a> and <a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a> to explore advanced features and best practices.</p>
+</section>
+
+<section>
+    <div class="navegation">
+        <a href="/docs/environment-setup" class="back btn_nav">
+            Environment Setup
+        </a>
+        <a href="/docs/features" class="next btn_nav">
+            Features
+        </a>
+    </div>
+</section>
+{% endblock %}

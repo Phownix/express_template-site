@@ -1,44 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation - Express Template Site</title>
+{% extends "../Layout.html" %}
 
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+{% block App %}
+<section>
+    <h2>Welcome to the Documentation</h2>
+    <p>Welcome to the documentation for Express Template Site. Here you'll find detailed information about how to use and customize the template for your projects.</p>
+</section>
 
-    <link rel="stylesheet" href="/global.css">
-</head>
-<body>
-    <header>
-        <h1>Express Template Site</h1>
-        <p>Template to start a website project using Express.js, Nunjucks and more.</p>
-    </header>
-
-    <main>
-        <section>
-            <h2>Welcome to the Documentation</h2>
-            <p>Welcome to the documentation for Express Template Site. Here you'll find detailed information about how to use and customize the template for your projects.</p>
-        </section>
-
-        <section>
-            <h2>Sections</h2>
-            <ul>
-                <li><a href="/docs/introduction">Introduction</a></li>
-                <li><a href="/docs/environment-setup">Environment Setup</a></li>
-                <li><a href="/docs/project-structure">Project Structure</a></li>
-                <li><a href="/docs/features">Features</a></li>
-                <li><a href="/docs/best-practices">Best Practices</a></li>
-                <li><a href="/docs/faqs">FAQs</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>
-            Express Template Site | Developed by <a href="https://phownix.vercel.app/">Phownix</a>
-        </p>
-    </footer>
-</body>
-</html>
+<section>
+    <h2>Sections</h2>
+    <ul>
+        <li><a href="/docs/introduction">Introduction</a></li>
+        <li><a href="/docs/environment-setup">Environment Setup</a></li>
+        <li><a href="/docs/project-structure">Project Structure</a></li>
+        <li><a href="/docs/features">Features</a></li>
+        <li><a href="/docs/best-practices">Best Practices</a></li>
+        <li><a href="/docs/faqs">FAQs</a></li>
+    </ul>
+</section>
+{% endblock %}

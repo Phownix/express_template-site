@@ -1,0 +1,33 @@
+{% extends "../Layout.html" %}
+
+{% block App %}
+<section>
+    <h2>Common Questions</h2>
+    <ol>
+        <li><strong>How do I add a new page to the website?</strong><br>
+            To add a new page, you'll need to create a new route in the appropriate `pages` file and a corresponding HTML template in the `views` directory. Refer to the documentation for detailed instructions.</li>
+        <li><strong>Can I integrate a database with this template?</strong><br>
+            Yes, you can integrate databases like MongoDB or MySQL by installing the necessary npm packages and configuring database connections in your controllers.</li>
+        <li><strong>How can I customize the styling of my website?</strong><br>
+            You can customize the CSS styles by editing the `global.css` file located in the `public` directory. Alternatively, you can use front-end frameworks like Bootstrap or Tailwind CSS.</li>
+        <li><strong>What is the purpose of the `.env` file?</strong><br>
+            The `.env` file is used to store environment variables such as API keys, database credentials, or configuration settings. These variables can be accessed in your application using the `dotenv` package.</li>
+    </ol>
+</section>
+<section>
+    <h2>Additional Resources</h2>
+    <ul>
+        <li>For more information on Express.js, visit the <a href="https://expressjs.com/">Express.js documentation</a>.</li>
+        <li>Learn about Nunjucks templating engine from the <a href="https://mozilla.github.io/nunjucks/">Nunjucks documentation</a>.</li>
+        <li>Explore best practices for web development on the <a href="https://developer.mozilla.org/en-US/docs/Web">MDN Web Docs</a>.</li>
+    </ul>
+</section>
+<section>
+    <div class="navegation">
+        <a href="/docs/best-practices" class="back btn_nav">
+            Best Practices
+        </a>
+        <a></a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Template Site</title>
+
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/global.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/">Express Template Site</a></h1>
+        <p>Template to start a website project using Express.js, Nunjucks and more.</p>
+    </header>
+
+    <main>
+        {% block App %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>
+            Express Template Site | Developed by <a href="https://phownix.vercel.app/">Phownix</a>
+        </p>
+    </footer>
+</body>
+</html>

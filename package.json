@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "npx nodemon index.js --ext html,css,js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/home.test.js"
   },
   "repository": {
     "type": "git",

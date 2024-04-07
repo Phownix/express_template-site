@@ -1,0 +1,44 @@
+{% extends "../Layout.html" %}
+
+{% block App %}
+<section>
+    <h2>Requirements</h2>
+    <p>Before you get started, ensure that you have the following prerequisites installed on your system:</p>
+    <ul>
+        <li><a href="https://nodejs.org/">Node.js</a> (with npm)</li>
+        <li>Git (optional, for cloning the repository)</li>
+    </ul>
+</section>
+<section>
+    <h2>Setup Instructions</h2>
+    <ol>
+        <li>Clone or download the <a href="https://github.com/your/repository">Express Template Site repository</a> from GitHub.</li>
+        <li>Navigate to the project directory in your terminal.</li>
+        <li>Install dependencies using the following command:</li>
+    </ol>
+    <code>
+        npm install
+    </code>
+    <ol start="4">
+        <li>Create a <kbd>.env</kbd> file in the root directory and configure any necessary environment variables (e.g., PORT).</li>
+        <li>Start the application in development mode with automatic server restarts using:</li>
+    </ol>
+    <code>
+        npm run dev
+    </code>
+</section>
+<section>
+    <h2>Verification</h2>
+    <p>Open your web browser and navigate to <a href="http://localhost:3000/">http://localhost:3000/</a> to verify that the Express Template Site is running successfully in your development environment.</p>
+</section>
+<section>
+    <div class="navegation">
+        <a href="/docs/introduction" class="back btn_nav">
+            Introduction
+        </a>
+        <a href="/docs/project-structure" class="next btn_nav">
+            Project Structure
+        </a>
+    </div>
+</section>
+{% endblock %}
