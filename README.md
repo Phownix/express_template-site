@@ -14,7 +14,7 @@ Follow these steps to get started with the Express Template Site:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/your-username/express-template-site.git
+    git clone https://github.com/Phownix/express_template-site.git
     ```
 
 2. **Install Dependencies**:
