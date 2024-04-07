@@ -40,7 +40,7 @@ Follow these steps to get started with the Express Template Site:
 
 The project follows a standard directory structure:
 
-```rust
+```bash
 / controllers
 |-> HomeController.js
 |-> DocumentController.js
